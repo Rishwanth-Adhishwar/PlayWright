@@ -9,25 +9,22 @@ dotenv.config({
 
 export default defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
-  fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
 
+  fullyParallel: true,
+
+  forbidOnly: !!process.env.CI,
+
+  retries: process.env.CI ? 2 : 0,
+
+  workers: process.env.CI ? 1 : undefined,
+
+  use: {
     headless: true,
     screenshot: 'only-on-failure',
     trace: 'on',
     video: 'retain-on-failure',
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
@@ -44,11 +41,9 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
   ],
+
   reporter: [
     ['html'],
-    ['allure-playwright'],
-    , {
-      outputDir: 'extent-report',
-      reportName: 'Playwright Extent Report'
-    }],
+    ['allure-playwright']
+  ],
 });
