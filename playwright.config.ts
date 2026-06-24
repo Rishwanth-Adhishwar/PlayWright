@@ -18,13 +18,12 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
     headless: true,
     screenshot: 'only-on-failure',
-    trace: 'on-first-retry',
+    trace: 'on',
     video: 'retain-on-failure',
   },
 
@@ -44,5 +43,13 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+  ],
+  reporter: [
+    ['html'],
+    ['allure-playwright'],
+    ['playwright-extent-reporter', {
+      outputDir: 'extent-report',
+      reportName: 'Playwright Extent Report'
+    }]
   ],
 });
