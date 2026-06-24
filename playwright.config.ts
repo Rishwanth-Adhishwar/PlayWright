@@ -47,9 +47,8 @@ export default defineConfig({
   reporter: [
     ['html'],
     ['allure-playwright'],
-    ['playwright-extent-reporter', {
+    , {
       outputDir: 'extent-report',
       reportName: 'Playwright Extent Report'
-    }]
-  ],
+    }],
 });
