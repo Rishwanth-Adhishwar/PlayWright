@@ -1,0 +1,399 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: automation_exercise\TestCase1.test.ts >> Testcase 1 - Register User
+- Location: tests\automation_exercise\TestCase1.test.ts:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for practice automation" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for practice automation" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36]: 
+            - text: Contact us
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - heading "Enter Account Information" [level=2] [ref=e42]
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: Title
+          - generic [ref=e47]:
+            - radio "Mr." [ref=e49]
+            - text: Mr.
+          - generic [ref=e51]:
+            - radio "Mrs." [ref=e53]
+            - text: Mrs.
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - text: Name
+            - superscript [ref=e56]: "*"
+          - textbox "Name *" [ref=e57]: funofbun
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - text: Email
+            - superscript [ref=e60]: "*"
+          - textbox "Email *" [disabled] [ref=e61]: funofbun1782406324951@gmail.com
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - text: Password
+            - superscript [ref=e64]: "*"
+          - textbox "Password *" [ref=e65]: funofbun
+        - generic [ref=e66]:
+          - generic [ref=e67]: Date of Birth
+          - generic [ref=e68]:
+            - combobox [ref=e71]:
+              - option "Day" [selected]
+              - option "1"
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+              - option "6"
+              - option "7"
+              - option "8"
+              - option "9"
+              - option "10"
+              - option "11"
+              - option "12"
+              - option "13"
+              - option "14"
+              - option "15"
+              - option "16"
+              - option "17"
+              - option "18"
+              - option "19"
+              - option "20"
+              - option "21"
+              - option "22"
+              - option "23"
+              - option "24"
+              - option "25"
+              - option "26"
+              - option "27"
+              - option "28"
+              - option "29"
+              - option "30"
+              - option "31"
+            - combobox [ref=e74]:
+              - option "Month" [selected]
+              - option "January"
+              - option "February"
+              - option "March"
+              - option "April"
+              - option "May"
+              - option "June"
+              - option "July"
+              - option "August"
+              - option "September"
+              - option "October"
+              - option "November"
+              - option "December"
+            - combobox [ref=e77]:
+              - option "Year" [selected]
+              - option "2021"
+              - option "2020"
+              - option "2019"
+              - option "2018"
+              - option "2017"
+              - option "2016"
+              - option "2015"
+              - option "2014"
+              - option "2013"
+              - option "2012"
+              - option "2011"
+              - option "2010"
+              - option "2009"
+              - option "2008"
+              - option "2007"
+              - option "2006"
+              - option "2005"
+              - option "2004"
+              - option "2003"
+              - option "2002"
+              - option "2001"
+              - option "2000"
+              - option "1999"
+              - option "1998"
+              - option "1997"
+              - option "1996"
+              - option "1995"
+              - option "1994"
+              - option "1993"
+              - option "1992"
+              - option "1991"
+              - option "1990"
+              - option "1989"
+              - option "1988"
+              - option "1987"
+              - option "1986"
+              - option "1985"
+              - option "1984"
+              - option "1983"
+              - option "1982"
+              - option "1981"
+              - option "1980"
+              - option "1979"
+              - option "1978"
+              - option "1977"
+              - option "1976"
+              - option "1975"
+              - option "1974"
+              - option "1973"
+              - option "1972"
+              - option "1971"
+              - option "1970"
+              - option "1969"
+              - option "1968"
+              - option "1967"
+              - option "1966"
+              - option "1965"
+              - option "1964"
+              - option "1963"
+              - option "1962"
+              - option "1961"
+              - option "1960"
+              - option "1959"
+              - option "1958"
+              - option "1957"
+              - option "1956"
+              - option "1955"
+              - option "1954"
+              - option "1953"
+              - option "1952"
+              - option "1951"
+              - option "1950"
+              - option "1949"
+              - option "1948"
+              - option "1947"
+              - option "1946"
+              - option "1945"
+              - option "1944"
+              - option "1943"
+              - option "1942"
+              - option "1941"
+              - option "1940"
+              - option "1939"
+              - option "1938"
+              - option "1937"
+              - option "1936"
+              - option "1935"
+              - option "1934"
+              - option "1933"
+              - option "1932"
+              - option "1931"
+              - option "1930"
+              - option "1929"
+              - option "1928"
+              - option "1927"
+              - option "1926"
+              - option "1925"
+              - option "1924"
+              - option "1923"
+              - option "1922"
+              - option "1921"
+              - option "1920"
+              - option "1919"
+              - option "1918"
+              - option "1917"
+              - option "1916"
+              - option "1915"
+              - option "1914"
+              - option "1913"
+              - option "1912"
+              - option "1911"
+              - option "1910"
+              - option "1909"
+              - option "1908"
+              - option "1907"
+              - option "1906"
+              - option "1905"
+              - option "1904"
+              - option "1903"
+              - option "1902"
+              - option "1901"
+              - option "1900"
+        - generic [ref=e78]:
+          - checkbox "Sign up for our newsletter!" [ref=e79]
+          - text: Sign up for our newsletter!
+        - generic [ref=e80]:
+          - checkbox "Receive special offers from our partners!" [ref=e81]
+          - text: Receive special offers from our partners!
+        - heading "Address Information" [level=2] [ref=e82]
+        - paragraph [ref=e83]:
+          - generic [ref=e84]:
+            - text: First name
+            - superscript [ref=e85]: "*"
+          - textbox "First name *" [ref=e86]: fun
+        - paragraph [ref=e87]:
+          - generic [ref=e88]:
+            - text: Last name
+            - superscript [ref=e89]: "*"
+          - textbox "Last name *" [ref=e90]: ofbun
+        - paragraph [ref=e91]:
+          - generic [ref=e92]: Company
+          - textbox "Company" [ref=e93]
+        - paragraph [ref=e94]:
+          - generic [ref=e95]:
+            - text: Address
+            - superscript [ref=e96]: "*"
+            - text: (Street address, P.O. Box, Company name, etc.)
+          - textbox "Address * (Street address, P.O. Box, Company name, etc.)" [ref=e97]: vesarpadi
+        - paragraph [ref=e98]:
+          - generic [ref=e99]: Address 2
+          - textbox "Address 2" [ref=e100]
+        - paragraph [ref=e101]:
+          - generic [ref=e102]:
+            - text: Country
+            - superscript [ref=e103]: "*"
+          - combobox "Country *" [ref=e104]:
+            - option "India" [selected]
+            - option "United States"
+            - option "Canada"
+            - option "Australia"
+            - option "Israel"
+            - option "New Zealand"
+            - option "Singapore"
+        - paragraph [ref=e105]:
+          - generic [ref=e106]:
+            - text: State
+            - superscript [ref=e107]: "*"
+          - textbox "State *" [ref=e108]: TamilNadu
+        - paragraph [ref=e109]:
+          - generic [ref=e110]:
+            - text: City
+            - superscript [ref=e111]: "*"
+          - textbox "City * Zipcode *" [ref=e112]: salem
+        - paragraph [ref=e113]:
+          - generic [ref=e114]:
+            - text: Zipcode
+            - superscript [ref=e115]: "*"
+          - textbox [ref=e116]: "600038"
+        - paragraph [ref=e117]:
+          - generic [ref=e118]:
+            - text: Mobile Number
+            - superscript [ref=e119]: "*"
+          - textbox "Mobile Number *" [ref=e120]: "7654321098"
+        - button "Create Account" [active] [ref=e121] [cursor=pointer]
+    - insertion [ref=e123]:
+      - generic [ref=e126]:
+        - heading "These are topics related to the article that might interest you" [level=2] [ref=e128]: Discover more
+        - link "Software testing tutorials" [ref=e129] [cursor=pointer]:
+          - generic "Software testing tutorials" [ref=e130]
+          - img [ref=e132]
+        - link "Software testing services" [ref=e134] [cursor=pointer]:
+          - generic "Software testing services" [ref=e135]
+          - img [ref=e137]
+        - link "Website design templates" [ref=e139] [cursor=pointer]:
+          - generic "Website design templates" [ref=e140]
+          - img [ref=e142]
+  - contentinfo [ref=e144]:
+    - generic [ref=e149]:
+      - heading "Subscription" [level=2] [ref=e150]
+      - generic [ref=e151]:
+        - textbox "Your email address" [ref=e152]
+        - button "" [ref=e153] [cursor=pointer]:
+          - generic [ref=e154]: 
+        - paragraph [ref=e155]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e159]: Copyright © 2021 All rights reserved
+  - link "" [ref=e160] [cursor=pointer]:
+    - /url: "#top"
+    - generic [ref=e161]: 
+  - insertion [ref=e163]:
+    - generic [ref=e166]:
+      - heading "These are topics related to the article that might interest you" [level=2] [ref=e168]: Discover more
+      - link "Automation practice website" [ref=e169] [cursor=pointer]:
+        - generic "Automation practice website" [ref=e170]
+        - img [ref=e172]
+      - link "Automation testing tools" [ref=e174] [cursor=pointer]:
+        - generic "Automation testing tools" [ref=e175]
+        - img [ref=e177]
+      - link "Website development services" [ref=e179] [cursor=pointer]:
+        - generic "Website development services" [ref=e180]
+        - img [ref=e182]
+  - insertion [ref=e184]:
+    - iframe [ref=e187]:
+      - iframe [ref=f30e1]:
+        - generic [active]:
+          - generic [ref=f31e1]:
+            - generic [ref=f31e2]:
+              - generic:
+                - img [ref=f31e6] [cursor=pointer]
+                - button [ref=f31e8] [cursor=pointer]:
+                  - img [ref=f31e9]
+            - insertion [ref=f31e16]:
+              - generic [ref=f31e17]:
+                - link "Click Here" [ref=f31e18] [cursor=pointer]:
+                  - /url: https://googleads.g.doubleclick.net/dbm/clk?sa=L&ai=CiM-Wulw9arv0Ea3MmsMPvaK2oAvd_cvuhQHqrpDioxWv5Z25wEYQASD9tJ6VAWDlkuiD2A6gAYviiqAByAEJqAMByAObBKoE_wFP0Ldh-Y8T2HAa7vhUBUwxOR-GnOJma1qOeOtGC0sygjnikFEFRGRttKqhb6myJdGhGllq_dMKSrayKAK0SHFliN9D-1JkhwF05VJZ0-RRpFH9V62avC9PUolCvr12tUcipRGPll0cv2b7uFhXU63BH1UGjbOqSTGzd2TJR0KMverKim32Clkh2W08kNn_7cdGAx2g3gz4UC9bo9a2CAxJOD5u9Wf6zsLj86_RbVbhnoc27eSGX2H2LRwhdYO-EORSdqsqT8145MztXT4un7s2bnY1DH_1GyJJLqO3O9MPHv9R9SN7tfwmLBJ19T7Ifu55x3Z1XO6z9GyL5EeqDoLABPPcjO60BeAEA4gFj56Vo1SQBgGgBk2AB92d9d8CqAenzLECqAemvhuoB8zOsQKoB_PRG6gHltgbqAeqm7ECqAeOzhuoB5PYG6gH8OAbqAfulrECqAf-nrECqAevvrECqAfVyRuoB9m2sQKoB5oGqAf_nrECqAffn7ECqAf4wrECqAf7wrECqAfn17EC2AcA0ggzCIBhEAEYnwMyCIqCgICAgIAIOg-AQIDAgICAgKiAAqiDgBBIvf3BOlixjaaB7aKVA2ABgAoBmAsByAsBgAwBqg0CSU7qDRMI_76mge2ilQMVLaZmAh09kQ208A0BiA4JsBPtofAi0BMA2BMNiBQB2BQB0BUByhYCCgD4FgGAFwGyFwQYAlAGshgJEgKdYxhNIgEA0BkB2BkB&ae=1&num=1&cid=CAQSjQIAEQoqgTvjrkbevFl2sBF5g7uc83UWca_uoBIsaz-qn-gyKdLy04GpFPDsGmCfQWZ1P1sm_j0X5DvjGHBwjZt1QsVfmXLSEcgz6ZJNFVlV-UplE1BS9vFMhC4z_6XUphjTd8NlrzPpuISth-lO9vDsdNdS0lsCLRtqiZ9d3YYpcH-vRLz2pECONFPMrunrXlU6IRnODBLdaw6cJ5RTNq8UdIKqT7yNEpB5F_0CDAN9m_6z7wq7kDrm3gMn6I2ujbpdRcwgClE3RCNGiCGoavPGWE_ayXX8jD8P9QGm4dORme-aOJ1npkgRahT4O5sxlo-PLyzz0FLpBbQSgatGRfZ5gFDuFp2ZtQwLWTnnUhgB&sig=AOD64_38bEW1sqGZfYsRuaVrGIra8l8iHg&client=ca-pub-1677597403311019&dbm_c=AKAmf-B_2rY_OpFHzlaYHKpsDU3SVnnDtfFyEV-tPH5VnsA6n-DCuHVSYwzWbhmJQykt4BrFeWo-et3dhXMTX9LmIxnRAXn5VzPloEX4nlxVZVyPVjNTvguS9zb6qIk73j235sYSDHgaQt1Safd2X9CnuI80uspLLBBz_zqv1GTs9D747h1uAo6x1YqHKmdTYBxNYkxk5jzVtrPZmgrt5lJmLpgngsTI725UbEzKRPkoEwzu811_dmGZTIEVJU9_zyJP8fP5YMwDOWvBMJ_OMeJHN3ukJroi7qe13ibqrUO1w-A6tgMIJC4&cry=1&dbm_d=AKAmf-AyIg9WMYp3BZjRVPAifIeWZxYNl0DVbwUXbss7JuHCkF-IIJ0mrRbP-WHHM9Lp2HEA1ZE4Gao1oWmb-vjXjA5gXMoCbcc6oTbUCn2nBdJaI3gAr9E69J_k8Klee1Zz2ODYOlobMUkh1wmypuFihAZwBjP6bVGcIZdkx84TwvH2n5R0XgxiGAHAN-x9dcryqYN66p_PNZWwmudK4T68HztWir1ZtDX3IuuNMubjDI8C0lzN02aZx_r7f_l2pruGylZGR7424YPKRLYOCJsWu6oiDUyuZmkTrjN1IHRcg3NepFPutYYOQn-VY2KvTuwcjl5ePB0x9pZqpmP0NJQI-l3Zj4fifTKaZp2JtHOScHQ1Co6Mg806drH2eFp9dltxn3GnhCJhOnB6alXZSm_TzKGgo5Z_TR8KOf-NPuloGcEr0OOEHwrPekXiswW-w0YfWHP1-MK909hzsNnSh-hqtfjFz0_Qua47c3JSVOD0oXgUpBuYZPbHyCx6V_mqSL3fAxBMmhlb1gUR1ATlDnkBrXaD1660Ewko-qjYQ9Rm6rTap4aYd7ccnsB7rS2PjnZKYrJbhicOS_Pj7EoqSYZoo9Wf5_N04WrCSHBlNWh4qTg0i1vkLIQWu6a9MLF1E65PkQDj_S25pyNJBNKHaZLqPKAy3kxU3HqR6T8dbsZLBjJLZ3lsoz1FgQ3mAhrkxpEu_K2qOIhiKorh-sw1gonjee-KWphq2w&adurl=https://servedby.flashtalking.com/click/7/296653;10338317;6146786;210;0/?us_privacy=!!US_PRIVACY!&ft_partnerimpid=ABAjH0h4wOF9mHAKfylVkZosRO2Z&ft_impID=768EF525-7D0E-4CF8-3FE3-EF6E81D67489&ft_section=22622326543&g=67507D337A76F4&random=840557.2925852751&ft_width=728&ft_height=90&url=https://www.adobe.com/in/education/students/creativecloud.html?&sdid=PQ7SPXQB&mv=display&mv2=display
+                  - img "Click Here" [ref=f31e19]
+                - link "AdChoices arrow" [ref=f31e21] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img "AdChoices arrow" [ref=f31e22]
+                - link "Privacy Notification" [ref=f31e24] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img [ref=f31e25]
+                - link "Privacy Notification" [ref=f31e27] [cursor=pointer]:
+                  - /url: https://www.flashtalking.com/consumer-privacy
+                  - img [ref=f31e28]
+          - iframe
+  - generic [ref=e188]:
+    - generic [ref=e189] [cursor=pointer]:
+      - img [ref=e191]
+      - link "Go to shopping options for Website design templates" [ref=e193]: Website design templates
+    - button "Close shopping anchor" [ref=e194]
+```
