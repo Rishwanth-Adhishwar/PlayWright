@@ -1,8 +1,8 @@
-import { test,expect, Dialog } from '@playwright/test';
+import { test, expect, Dialog } from '@playwright/test';
 
-test("Testcase 6 - Contact Us Form",async({page})=>{
+test("Testcase 6 - Contact Us Form", async ({ page }) => {
 
-    await page.goto("https://automationexercise.com/", { waitUntil: "commit" })
+    await page.goto("https://automationexercise.com/")
     await expect(page).toHaveTitle("Automation Exercise")
 
     await page.click("//a[normalize-space()='Contact us']");
@@ -13,7 +13,7 @@ test("Testcase 6 - Contact Us Form",async({page})=>{
     await page.fill("//input[@name = 'email']", "funofbun@gmail.com");
     await page.fill("//input[@name = 'subject']", "Sample Mail");
     await page.fill("//textarea[@id = 'message']", "Hi");
-    
+
 
     page.on('dialog', async dialog => {
         console.log(dialog.message());

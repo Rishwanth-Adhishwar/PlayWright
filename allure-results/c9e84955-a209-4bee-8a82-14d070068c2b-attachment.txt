@@ -1,0 +1,3 @@
+Number of pages:  3
+New window text: This is a sample page
+New window text: This is a sample page

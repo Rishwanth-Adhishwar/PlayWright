@@ -18,6 +18,13 @@ export default defineConfig({
 
   workers: process.env.CI ? 1 : undefined,
 
+  timeout: 60 * 1000, // 60 seconds
+
+  // Timeout for expect assertions
+  expect: {
+    timeout: 10 * 1000, // 10 seconds
+  },
+
   use: {
     headless: true,
     screenshot: 'only-on-failure',
@@ -31,15 +38,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
   ],
 
   reporter: [

@@ -1,0 +1,2 @@
+Boxing:  { x: 49, y: 484.5, width: 180, height: 46 }
+Result:  Entered value is not a number

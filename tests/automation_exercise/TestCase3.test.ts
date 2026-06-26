@@ -2,7 +2,7 @@ import { test, chromium, expect, Page, Browser } from '@playwright/test';
 
 test("Testcase 3 - Login using invalid credentials ", async ({ page }) => {
 
-    await page.goto("https://automationexercise.com/", { waitUntil: "commit" })
+    await page.goto("https://automationexercise.com/")
 
     await page.click("//a[normalize-space()='Signup / Login']");
 

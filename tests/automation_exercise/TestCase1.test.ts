@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test("Testcase 1 - Register User", async ({ page }) => {
 
-    await page.goto("https://automationexercise.com/", { waitUntil: "commit" })
+    await page.goto("https://automationexercise.com/")
     await expect(page).toHaveTitle("Automation Exercise")
 
     await page.click("//a[normalize-space()='Signup / Login']");

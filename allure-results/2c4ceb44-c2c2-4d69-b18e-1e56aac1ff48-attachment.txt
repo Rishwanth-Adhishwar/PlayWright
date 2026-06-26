@@ -1,0 +1,10 @@
+Number of pages:  3
+=====================
+URL:  https://demoqa.com/browser-windows
+Title:  Promise { <pending> }
+=====================
+URL:  https://demoqa.com/sample
+Title:  Promise { <pending> }
+=====================
+URL:  https://demoqa.com/sample
+Title:  Promise { <pending> }

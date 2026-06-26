@@ -1,8 +1,8 @@
-import { test,chromium,expect,Page,Browser } from '@playwright/test';
+import { test, chromium, expect, Page, Browser } from '@playwright/test';
 
-test("Testcase 7 - Testcase page visibility ",async({page})=>{
-   
-    await page.goto("https://automationexercise.com/", { waitUntil: "commit" })
+test("Testcase 7 - Testcase page visibility ", async ({ page }) => {
+
+    await page.goto("https://automationexercise.com/")
 
     await expect(page).toHaveTitle("Automation Exercise");
 
