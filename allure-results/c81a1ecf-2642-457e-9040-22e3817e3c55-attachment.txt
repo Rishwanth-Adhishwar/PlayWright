@@ -1,0 +1,11 @@
+Page Title:  Automation Testing Practice
+Page URL:  https://testautomationpractice.blogspot.com/
+Page Source Length:  95059
+Checkbox Count:  13
+Page Heading:  
+Automation Testing Practice
+
+Name Field Visible:  true
+After Back URL:  https://testautomationpractice.blogspot.com/
+After Forward URL:  https://www.google.com/
+New Page Title:  Swag Labs
