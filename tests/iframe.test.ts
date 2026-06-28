@@ -1,7 +1,7 @@
 
 import { expect, test } from '@playwright/test';
 
-test('frame1', async ({ page }) => {
+test('@smoke frame1', async ({ page }) => {
     await page.goto('https://letcode.in/frame');
     const allFrames = page.frames()
     console.log(allFrames.length)

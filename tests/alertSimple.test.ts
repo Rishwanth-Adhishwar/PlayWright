@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test('simple alert', async ({ page }) => {
+test('@smoke simple alert', async ({ page }) => {
 
     await page.goto("https://www.testmuai.com/selenium-playground/javascript-alert-box-demo/");
     page.once('dialog', async dialog => {

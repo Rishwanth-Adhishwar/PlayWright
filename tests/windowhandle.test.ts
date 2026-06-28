@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test('handle tabwindow', async ({ page, context }) => {
+test('@smoke handle tabwindow', async ({ page, context }) => {
     await page.goto("https://demoqa.com/browser-windows");
 
     const [newWindow] = await Promise.all([
