@@ -1,0 +1,6 @@
+Test Title:  demo blaze login
+Test Status:  passed
+Test exppectedStatus:  passed
+Test Duration:  14508
+Test Retry Number:  0
+Test Output Directory:  D:\PlayWright\test-results\testinfo-demo-blaze-login-chromium-repeat2

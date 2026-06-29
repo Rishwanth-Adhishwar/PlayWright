@@ -1,0 +1,9 @@
+Before All Test [Sign In]
+Launched Website Successfully
+Test Title:  demo blaze login
+Test Status:  passed
+Test expectedStatus:  passed
+Test Duration:  5949
+Test Retry Number:  0
+Test Output Directory:  D:\PlayWright\test-results\testinfo-demo-blaze-login-chromium
+After All Test [Sign Out]

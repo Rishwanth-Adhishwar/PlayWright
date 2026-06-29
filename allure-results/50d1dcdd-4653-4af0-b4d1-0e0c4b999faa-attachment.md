@@ -1,0 +1,930 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: parameterization.test.ts >> Bing search test >> search Flow - cucumber
+- Location: tests\parameterization.test.ts:11:9
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.bing.com/
+Call log:
+  - navigating to "https://www.bing.com/", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - heading "Microsoft Logo Image" [level=1] [ref=e19]:
+            - img "Microsoft Logo Image" [ref=e20] [cursor=pointer]
+          - navigation [ref=e28]:
+            - menubar [ref=e29]:
+              - menuitem "Copilot" [ref=e30] [cursor=pointer]:
+                - link "Copilot" [ref=e31]:
+                  - /url: /chat?FORM=hpcodx&intent=bing
+                  - generic [ref=e33]: Copilot
+              - menuitem "Images" [ref=e34] [cursor=pointer]:
+                - link "Images" [ref=e35]:
+                  - /url: /images?FORM=Z9LH
+              - menuitem "Videos" [ref=e36] [cursor=pointer]:
+                - link "Videos" [ref=e37]:
+                  - /url: /videos?FORM=Z9LH1
+              - menuitem "Shopping" [ref=e38] [cursor=pointer]:
+                - link "Shopping" [ref=e39]:
+                  - /url: /shop?FORM=Z9LHS4
+              - menuitem "Maps" [ref=e40] [cursor=pointer]:
+                - link "Maps" [ref=e41]:
+                  - /url: /maps?FORM=Z9LH2
+              - menuitem "News" [ref=e42] [cursor=pointer]:
+                - link "News" [ref=e43]:
+                  - /url: /news/search?q=Top+stories&nvaug=%5bNewsVertical+Category%3d%22rt_MaxClass%22%5d&FORM=Z9LH3
+              - menuitem ". . . More" [ref=e44] [cursor=pointer]:
+                - text: . . .
+                - button "More" [ref=e45]
+        - complementary "Account Rewards and Preferences" [ref=e48]:
+          - link "Sign in Sign in" [ref=e49] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e50]: Sign in
+            - generic "Sign in" [ref=e51]
+          - button "Microsoft Rewards" [ref=e52] [cursor=pointer]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: Rewards
+              - img [ref=e57]
+          - button "Mobile" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: Mobile
+            - img [ref=e64]
+          - button "Settings and quick links" [ref=e67] [cursor=pointer]
+          - generic [ref=e68]:
+            - menuitem [ref=e69] [cursor=pointer]:
+              - generic [ref=e73]: Collections
+            - generic [ref=e75]:
+              - menuitem [ref=e76]:
+                - generic [ref=e80]: Settings
+              - menuitem [ref=e82] [cursor=pointer]:
+                - generic [ref=e85]: Language
+                - generic [ref=e86]: English
+              - menuitem [ref=e87] [cursor=pointer]:
+                - generic [ref=e90]: Country/Region
+                - generic [ref=e91]: India
+              - menuitem [ref=e92] [cursor=pointer]:
+                - generic [ref=e95]: Voice
+              - menuitem [ref=e96] [cursor=pointer]:
+                - generic [ref=e99]: More
+            - menuitem [ref=e100] [cursor=pointer]:
+              - generic [ref=e101]:
+                - generic [ref=e104]: SafeSearch
+                - generic [ref=e105]: Moderate
+            - menuitem [ref=e106] [cursor=pointer]:
+              - generic [ref=e110]: Search history
+            - menuitem [ref=e111] [cursor=pointer]:
+              - generic [ref=e115]: Privacy
+            - menuitem [ref=e116] [cursor=pointer]:
+              - generic [ref=e120]: Feedback
+            - generic [ref=e121]:
+              - menuitem [expanded] [ref=e122]:
+                - generic [ref=e126]: Appearance
+              - menu [ref=e128]:
+                - menuitemradio [checked] [ref=e129] [cursor=pointer]:
+                  - generic [ref=e131]:
+                    - img [ref=e132]
+                    - text: Light
+                - menuitemradio [ref=e135] [cursor=pointer]:
+                  - generic [ref=e137]:
+                    - img [ref=e138]
+                    - text: Dark
+                - menuitemradio [ref=e141] [cursor=pointer]:
+                  - generic [ref=e143]:
+                    - img [ref=e144]
+                    - text: System default
+            - generic [ref=e147]:
+              - menuitem [ref=e148] [cursor=pointer]:
+                - generic [ref=e152]: Personalize your feed
+              - generic [ref=e153]:
+                - menuitem [expanded] [ref=e154]:
+                  - generic [ref=e158]: Customize your homepage
+                - option [checked] [ref=e160]:
+                  - generic [ref=e161]:
+                    - generic [ref=e163]: Show menu bar
+                    - img [ref=e166]
+                - option [checked] [ref=e169]:
+                  - generic [ref=e170]:
+                    - generic [ref=e172]: Show news and interests
+                    - img [ref=e175]
+                - option [checked] [ref=e178]:
+                  - generic [ref=e179]:
+                    - generic [ref=e181]: Show Trending on Bing
+                    - img [ref=e184]
+                - option [checked] [ref=e187]:
+                  - generic [ref=e188]:
+                    - generic [ref=e190]: Show homepage image
+                    - img [ref=e193]
+              - generic [ref=e197]:
+                - menu [ref=e198]:
+                  - menuitem [ref=e199] [cursor=pointer]: Privacy and Cookies
+                  - text: •
+                  - menuitem [ref=e200] [cursor=pointer]: Legal
+                  - text: •
+                  - menuitem [ref=e201] [cursor=pointer]: Advertise
+                  - text: •
+                  - menuitem [ref=e202] [cursor=pointer]: About our ads
+                  - text: •
+                  - menuitem [ref=e203] [cursor=pointer]: Help
+                - generic [ref=e204]: © 2026 Microsoft
+      - generic [ref=e205]:
+        - search [ref=e206]:
+          - img [ref=e208] [cursor=pointer]
+          - combobox "Enter your search here - Search suggestions will show as you type" [active] [ref=e212]:
+            - status [ref=e214]
+          - button "Search using voice" [ref=e216] [cursor=pointer]:
+            - img [ref=e217]
+          - button "Search using an image" [ref=e222] [cursor=pointer]
+          - link "Open Copilot" [ref=e223] [cursor=pointer]:
+            - /url: /chat?FORM=hpcodx&intent=bing
+          - group "Languages:" [ref=e227]:
+            - generic [ref=e228]: "Languages:"
+            - link "Hindi" [ref=e229] [cursor=pointer]:
+              - /url: /?setlang=hi&cc=in&cc=IN
+              - text: हिंदी
+            - link "Bangla" [ref=e230] [cursor=pointer]:
+              - /url: /?setlang=bn&cc=in&cc=IN
+              - text: বাংলা
+            - link "Urdu" [ref=e231] [cursor=pointer]:
+              - /url: /?setlang=ur&cc=in&cc=IN
+              - text: اردو
+            - link "Punjabi (Gurmukhi)" [ref=e232] [cursor=pointer]:
+              - /url: /?setlang=pa-guru&cc=in&cc=IN
+              - text: ਪੰਜਾਬੀ
+            - link "Marathi" [ref=e233] [cursor=pointer]:
+              - /url: /?setlang=mr&cc=in&cc=IN
+              - text: मराठी
+            - link "Telugu" [ref=e234] [cursor=pointer]:
+              - /url: /?setlang=te&cc=in&cc=IN
+              - text: తెలుగు
+            - link "Tamil" [ref=e235] [cursor=pointer]:
+              - /url: /?setlang=ta&cc=in&cc=IN
+              - text: தமிழ்
+            - link "Kannada" [ref=e236] [cursor=pointer]:
+              - /url: /?setlang=kn&cc=in&cc=IN
+              - text: ಕನ್ನಡ
+            - link "Gujarati" [ref=e237] [cursor=pointer]:
+              - /url: /?setlang=gu&cc=in&cc=IN
+              - text: ગુજરાતી
+            - link "Malayalam" [ref=e238] [cursor=pointer]:
+              - /url: /?setlang=ml&cc=in&cc=IN
+              - text: മലയാളം
+            - link "Odia" [ref=e239] [cursor=pointer]:
+              - /url: /?setlang=or&cc=in&cc=IN
+              - text: ଓଡ଼ିଆ
+        - generic [ref=e242]:
+          - link "Image creator" [ref=e243] [cursor=pointer]:
+            - /url: /images/create/ai-image-generator?bicsource=hp&FORM=bicbhp
+            - generic [ref=e245]: Image creator
+          - link "Video creator" [ref=e246] [cursor=pointer]:
+            - /url: /images/create/ai-video-generator?bicsource=hp&FORM=bvcbhp
+            - generic [ref=e248]: Video creator
+          - link "Text creator" [ref=e249] [cursor=pointer]:
+            - /url: /search?q=bing ai writing&FORM=btcbhp
+            - generic [ref=e251]: Text creator
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - dialog "Bing homepage quiz What does the Tahitian name Pora Pora translate to?" [ref=e257]:
+          - group "Bing homepage quiz What does the Tahitian name Pora Pora translate to?" [ref=e258]:
+            - generic [ref=e259]: Bing homepage quiz
+            - generic [ref=e260]: What does the Tahitian name Pora Pora translate to?
+            - list [ref=e261]:
+              - listitem [ref=e262]:
+                - 'link "Answer: A, Island gem, 1 of 3" [ref=e263] [cursor=pointer]':
+                  - /url: /search?q=Firstborn&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260629_BoraBoraLagoon%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%220%22+UserChoices%3A%220%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                  - generic [ref=e264]: A
+                  - text: Island gem
+              - listitem [ref=e265]:
+                - 'link "Answer: B, Firstborn, 2 of 3" [ref=e266] [cursor=pointer]':
+                  - /url: /search?q=Firstborn&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260629_BoraBoraLagoon%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%221%22+UserChoices%3A%221%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%221%22&FORM=HPQUIZ
+                  - generic [ref=e267]: B
+                  - text: Firstborn
+              - listitem [ref=e268]:
+                - 'link "Answer: C, Ocean jewel, 3 of 3" [ref=e269] [cursor=pointer]':
+                  - /url: /search?q=Firstborn&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260629_BoraBoraLagoon%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%222%22+UserChoices%3A%222%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                  - generic [ref=e270]: C
+                  - text: Ocean jewel
+        - generic [ref=e271]:
+          - generic:
+            - generic:
+              - link "Get the Bing Wallpaper app":
+                - /url: https://go.microsoft.com/fwlink/?linkid=2127455
+                - generic: Get the Bing Wallpaper app
+            - 'heading "Image of the day: Bora Bora and its lagoon, South Pacific, French Polynesia" [level=3]':
+              - 'link "Image of the day: Bora Bora and its lagoon, South Pacific, French Polynesia"':
+                - /url: /search?q=International+Day+of+the+Tropics&form=hpcapt&filters=HpDate:"20260628_1830"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+                - text: Bora Bora and its lagoon, South Pacific, French Polynesia
+            - generic:
+              - generic: © Frederick Millett/Shutterstock
+              - list:
+                - listitem:
+                  - button "Download this image. Use of this image is restricted to wallpaper only."
+          - generic [ref=e272]:
+            - link "Born on fire, held by water" [ref=e274] [cursor=pointer]:
+              - /url: /search?q=International+Day+of+the+Tropics&form=hpcapt&filters=HpDate:"20260628_1830"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+              - img [ref=e276]
+              - heading "Born on fire, held by water" [level=2] [ref=e279]
+            - generic [ref=e280] [cursor=pointer]:
+              - status [ref=e281]
+              - button "Previous image" [ref=e282]
+              - button "Next image" [disabled] [ref=e284]
+      - button "Feedback" [ref=e286] [cursor=pointer]:
+        - img [ref=e287]
+        - generic: Feedback
+      - generic [ref=e289]:
+        - region "Trending on Bing" [ref=e290]:
+          - generic:
+            - status [ref=e291]
+            - button "Toggle feed area position" [expanded] [ref=e292] [cursor=pointer]
+            - button "Previous news" [disabled]
+            - button "More news" [ref=e294] [cursor=pointer]
+          - list [ref=e296]:
+            - listitem [ref=e297]:
+              - list [ref=e298]:
+                - listitem [ref=e299] [cursor=pointer]:
+                  - 'link "WTC points table update: India rise one spot, Pakistan slip to bottom as West Indies beat Sri Lanka by huge margin © Sports Tak" [ref=e300]':
+                    - /url: /search?q=WTC+points+table+update%3a+India+rise+one+spot%2c+Pakistan+slip+to+bottom+as+West+Indies+beat+Sri+Lanka+by+huge+margin&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_89051EAD6AE5A428FC6000929FC6870C%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e301]:
+                      - 'heading "WTC points table update: India rise one spot, Pakistan slip to bottom as West Indies beat Sri Lanka by huge margin" [level=2] [ref=e302]':
+                        - generic [ref=e303]: "WTC points table update: India rise one spot, Pakistan slip to bottom as West Indies beat Sri Lanka by huge margin"
+                      - img "© Sports Tak" [ref=e304]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/sports/cricket/wtc-points-table-update-india-rise-one-spot-pakistan-slip-to-bottom-as-west-indies-beat-sri-lanka-by-huge-margin/ar-AA26LH2A?ocid=TobArticle
+                        - img [ref=e305]
+                - listitem [ref=e308] [cursor=pointer]:
+                  - 'link "Heavens are not going to fall: SC refuses urgent hearing of Ram temple donation case, questions rush © Hindustan Times" [ref=e309]':
+                    - /url: /search?q=Heavens+are+not+going+to+fall%3a+SC+refuses+urgent+hearing+of+Ram+temple+donation+case%2c+questions+rush&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_76158603649921FBE15F331A23289EE0%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e310]:
+                      - 'heading "Heavens are not going to fall: SC refuses urgent hearing of Ram temple donation case, questions rush" [level=2] [ref=e311]':
+                        - generic [ref=e312]: "Heavens are not going to fall: SC refuses urgent hearing of Ram temple donation case, questions rush"
+                      - img "© Hindustan Times" [ref=e313]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/India/heavens-are-not-going-to-fall-sc-refuses-urgent-hearing-of-ram-temple-donation-case-questions-rush/ar-AA26LDLL?ocid=TobArticle
+                        - img [ref=e314]
+                - listitem [ref=e317] [cursor=pointer]:
+                  - 'link "‘Truly remarkable gifts’: Iceland Cricket trolls Gautam Gambhir after India''s 0-2 T20 series loss to Ireland © The Economic Times" [ref=e318]':
+                    - /url: /search?q=%e2%80%98Truly+remarkable+gifts%e2%80%99%3a+Iceland+Cricket+trolls+Gautam+Gambhir+after+India%27s+0-2+T20+series+loss+to+Ireland&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_F8E7B73C109047B7A4D0F54C9AC8862A%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e319]:
+                      - 'heading "‘Truly remarkable gifts’: Iceland Cricket trolls Gautam Gambhir after India''s 0-2 T20 series loss to Ireland" [level=2] [ref=e320]':
+                        - generic [ref=e321]: "‘Truly remarkable gifts’: Iceland Cricket trolls Gautam Gambhir after India's 0-2 T20 series loss to Ireland"
+                      - img "© The Economic Times" [ref=e322]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/sports/cricket/truly-remarkable-gifts-iceland-cricket-trolls-gautam-gambhir-after-india-s-0-2-t20-series-loss-to-ireland/ar-AA26L0mY?ocid=TobArticle
+                        - img [ref=e323]
+                - listitem [ref=e326] [cursor=pointer]:
+                  - 'link "Stocks to buy today: Ganesh Dongre of Anand Rathi recommends three shares to buy or sell © Live Mint" [ref=e327]':
+                    - /url: /search?q=Stocks+to+buy+today%3a+Ganesh+Dongre+of+Anand+Rathi+recommends+three+shares+to+buy+or+sell&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_D1BDD8A682391EA570F3F4940855D3CC%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e328]:
+                      - 'heading "Stocks to buy today: Ganesh Dongre of Anand Rathi recommends three shares to buy or sell" [level=2] [ref=e329]':
+                        - generic [ref=e330]: "Stocks to buy today: Ganesh Dongre of Anand Rathi recommends three shares to buy or sell"
+                      - img "© Live Mint" [ref=e331]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/markets/stocks-to-buy-today-ganesh-dongre-of-anand-rathi-recommends-three-shares-to-buy-or-sell/ar-AA26LpFJ?ocid=TobArticle
+                        - img [ref=e332]
+                - listitem [ref=e335] [cursor=pointer]:
+                  - 'link "Maa Inti Bangaaram beats Arundhati: Samantha scores Telugu''s top woman-led hit © India Today" [ref=e336]':
+                    - /url: /search?q=Maa+Inti+Bangaaram+beats+Arundhati%3a+Samantha+scores+Telugu%27s+top+woman-led+hit&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_EA57699343885542CE3549FD6828BD3F%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e337]:
+                      - 'heading "Maa Inti Bangaaram beats Arundhati: Samantha scores Telugu''s top woman-led hit" [level=2] [ref=e338]':
+                        - generic [ref=e339]: "Maa Inti Bangaaram beats Arundhati: Samantha scores Telugu's top woman-led hit"
+                      - img "© India Today" [ref=e340]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/entertainment/bollywood/maa-inti-bangaaram-beats-arundhati-samantha-scores-telugu-s-top-woman-led-hit/ar-AA26LBVo?ocid=TobArticle
+                        - img [ref=e341]
+                - listitem [ref=e344] [cursor=pointer]:
+                  - 'link "Breakout stocks to buy or sell: Sumeet Bagadia recommends five shares to buy today - 29 June 2026 © Live Mint" [ref=e345]':
+                    - /url: /search?q=Breakout+stocks+to+buy+or+sell%3a+Sumeet+Bagadia+recommends+five+shares+to+buy+today+-+29+June+2026&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_EC47B13E54CA56FE04683B2F5ED3E686%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e346]:
+                      - 'heading "Breakout stocks to buy or sell: Sumeet Bagadia recommends five shares to buy today - 29 June 2026" [level=2] [ref=e347]':
+                        - generic [ref=e348]: "Breakout stocks to buy or sell: Sumeet Bagadia recommends five shares to buy today - 29 June 2026"
+                      - img "© Live Mint" [ref=e349]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/markets/breakout-stocks-to-buy-or-sell-sumeet-bagadia-recommends-five-shares-to-buy-today-29-june-2026/ar-AA26LoP8?ocid=TobArticle
+                        - img [ref=e350]
+                - listitem [ref=e353] [cursor=pointer]:
+                  - 'link "''Come forward and help us'': Ketan''s father appeals to witnesses present at Lohagad on day of murder © Business Today" [ref=e354]':
+                    - /url: /search?q=%27Come+forward+and+help+us%27%3a+Ketan%27s+father+appeals+to+witnesses+present+at+Lohagad+on+day+of+murder&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_850A21338306B290E8E92361225D4E8A%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e355]:
+                      - 'heading "''Come forward and help us'': Ketan''s father appeals to witnesses present at Lohagad on day of murder" [level=2] [ref=e356]':
+                        - generic [ref=e357]: "'Come forward and help us': Ketan's father appeals to witnesses present at Lohagad on day of murder"
+                      - img "© Business Today" [ref=e358]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/topstories/come-forward-and-help-us-ketan-s-father-appeals-to-witnesses-present-at-lohagad-on-day-of-murder/ar-AA26LDbd?ocid=TobArticle
+                        - img [ref=e359]
+                - listitem [ref=e362] [cursor=pointer]:
+                  - 'link "Twisha Sharma death case: Court to decide on key evidence; AIIMS reports and call records under scanner © The Daily Jagran" [ref=e363]':
+                    - /url: /search?q=Twisha+Sharma+death+case%3a+Court+to+decide+on+key+evidence%3b+AIIMS+reports+and+call+records+under+scanner&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_CFCB8DA86DFDB51321E151A521CC51A2%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e364]:
+                      - 'heading "Twisha Sharma death case: Court to decide on key evidence; AIIMS reports and call records under scanner" [level=2] [ref=e365]':
+                        - generic [ref=e366]: "Twisha Sharma death case: Court to decide on key evidence; AIIMS reports and call records under scanner"
+                      - img "© The Daily Jagran" [ref=e367]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/India/twisha-sharma-death-case-court-to-decide-on-key-evidence-aiims-reports-and-call-records-under-scanner/ar-AA26M1Jy?ocid=TobArticle
+                        - img [ref=e368]
+                - listitem [ref=e371] [cursor=pointer]:
+                  - link "PFC-REC merger approved! Here's what will happen to your existing shares after mega merger © The Economic Times" [ref=e372]:
+                    - /url: /search?q=PFC-REC+merger+approved!+Here%27s+what+will+happen+to+your+existing+shares+after+mega+merger&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_3C436BC1A292B8C8D36D816315AE3F5C%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e373]:
+                      - heading "PFC-REC merger approved! Here's what will happen to your existing shares after mega merger" [level=2] [ref=e374]:
+                        - generic [ref=e375]: PFC-REC merger approved! Here's what will happen to your existing shares after mega merger
+                      - img "© The Economic Times" [ref=e376]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/markets/pfc-rec-merger-approved-here-s-what-will-happen-to-your-existing-shares-after-mega-merger/ar-AA26KT9D?ocid=TobArticle
+                        - img [ref=e377]
+                - listitem [ref=e380] [cursor=pointer]:
+                  - link "Fire breaks out on 21st floor of Noida high-rise; AC blast suspected © NDTV 24x7" [ref=e381]:
+                    - /url: /search?q=Fire+breaks+out+on+21st+floor+of+Noida+high-rise%3b+AC+blast+suspected&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_B53FBC52D59B1C374A53B31F875B8E1A%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e382]:
+                      - heading "Fire breaks out on 21st floor of Noida high-rise; AC blast suspected" [level=2] [ref=e383]:
+                        - generic [ref=e384]: Fire breaks out on 21st floor of Noida high-rise; AC blast suspected
+                      - img "© NDTV 24x7" [ref=e385]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/India/fire-breaks-out-on-21st-floor-of-noida-high-rise-ac-blast-suspected/vi-AA26LAIk?ocid=TobArticle
+                        - img [ref=e386]
+                - listitem [ref=e389] [cursor=pointer]:
+                  - link "In protecting Vaibhav Sooryavanshi, Team India exposed its biggest flaws © NDTV Sports" [ref=e390]:
+                    - /url: /search?q=In+protecting+Vaibhav+Sooryavanshi%2c+Team+India+exposed+its+biggest+flaws&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_34C047DD22562C4DAFE54E53A8BC8301%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e391]:
+                      - heading "In protecting Vaibhav Sooryavanshi, Team India exposed its biggest flaws" [level=2] [ref=e392]:
+                        - generic [ref=e393]: In protecting Vaibhav Sooryavanshi, Team India exposed its biggest flaws
+                      - img "© NDTV Sports" [ref=e394]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/sports/cricket/in-protecting-vaibhav-sooryavanshi-team-india-exposed-its-biggest-flaws/ar-AA26LyGV?ocid=TobArticle
+                        - img [ref=e395]
+                - listitem [ref=e398] [cursor=pointer]:
+                  - link "Telangana CM brings favourite IAS home from Delhi & Sena (UBT) leaders’ public spat © ThePrint" [ref=e399]:
+                    - /url: /search?q=Telangana+CM+brings+favourite+IAS+home+from+Delhi+%26+Sena+(UBT)+leaders%e2%80%99+public+spat&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_A14204E4B156D30391F7385CF1993ED0%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e400]:
+                      - heading "Telangana CM brings favourite IAS home from Delhi & Sena (UBT) leaders’ public spat" [level=2] [ref=e401]:
+                        - generic [ref=e402]: Telangana CM brings favourite IAS home from Delhi & Sena (UBT) leaders’ public spat
+                      - img "© ThePrint" [ref=e403]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/India/telangana-cm-brings-favourite-ias-home-from-delhi-sena-ubt-leaders-public-spat/ar-AA26M74b?ocid=TobArticle
+                        - img [ref=e404]
+                - listitem [ref=e407] [cursor=pointer]:
+                  - link "India women self-destruct, have no one else to blame for T20 World Cup exit © Sports Today" [ref=e408]:
+                    - /url: /search?q=India+women+self-destruct%2c+have+no+one+else+to+blame+for+T20+World+Cup+exit&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_A8D3ED80FA6BF6E789CF54FFB4C3BD5E%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e409]:
+                      - heading "India women self-destruct, have no one else to blame for T20 World Cup exit" [level=2] [ref=e410]:
+                        - generic [ref=e411]: India women self-destruct, have no one else to blame for T20 World Cup exit
+                      - img "© Sports Today" [ref=e412]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/sports/cricket/india-women-self-destruct-have-no-one-else-to-blame-for-t20-world-cup-exit/ar-AA26L8by?ocid=TobArticle
+                        - img [ref=e413]
+                - listitem [ref=e416] [cursor=pointer]:
+                  - link "IT stocks' target cut up to 21%; Morgan Stanley bullish only on one stock, sees nearly 14% upside - Check company, target © ET Now" [ref=e417]:
+                    - /url: /search?q=IT+stocks%27+target+cut+up+to+21%25%3b+Morgan+Stanley+bullish+only+on+one+stock%2c+sees+nearly+14%25+upside+-+Check+company%2c+target&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_551BC19265359388E201807C975F0C8B%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e418]:
+                      - heading "IT stocks' target cut up to 21%; Morgan Stanley bullish only on one stock, sees nearly 14% upside - Check company, target" [level=2] [ref=e419]:
+                        - generic [ref=e420]: IT stocks' target cut up to 21%; Morgan Stanley bullish only on one stock, sees nearly 14% upside - Check company, target
+                      - img "© ET Now" [ref=e421]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/markets/it-stocks-target-cut-up-to-21-morgan-stanley-bullish-only-on-one-stock-sees-nearly-14-upside-check-company-target/ar-AA26Lear?ocid=TobArticle
+                        - img [ref=e422]
+                - listitem [ref=e425] [cursor=pointer]:
+                  - link "Nah tribe alleges Chinese PLA occupied ancestral land in Arunachal, seeks urgent government action © Moneycontrol" [ref=e426]:
+                    - /url: /search?q=Nah+tribe+alleges+Chinese+PLA+occupied+ancestral+land+in+Arunachal%2c+seeks+urgent+government+action&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_8F8DE1B22CE4631DE582D42708B231F8%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e427]:
+                      - heading "Nah tribe alleges Chinese PLA occupied ancestral land in Arunachal, seeks urgent government action" [level=2] [ref=e428]:
+                        - generic [ref=e429]: Nah tribe alleges Chinese PLA occupied ancestral land in Arunachal, seeks urgent government action
+                      - img "© Moneycontrol" [ref=e430]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/topstories/nah-tribe-alleges-chinese-pla-occupied-ancestral-land-in-arunachal-seeks-urgent-government-action/ar-AA26LEup?ocid=TobArticle
+                        - img [ref=e431]
+                - listitem [ref=e434] [cursor=pointer]:
+                  - link "US, Iran agree to halt fighting \"for now\", to discuss Hormuz plan in Qatar © NDTV 24x7" [ref=e435]:
+                    - /url: /search?q=US%2c+Iran+agree+to+halt+fighting+%22for+now%22%2c+to+discuss+Hormuz+plan+in+Qatar&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_A2EBD10CCDAF858CA1C23A19FF97A11F%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e436]:
+                      - heading "US, Iran agree to halt fighting \"for now\", to discuss Hormuz plan in Qatar" [level=2] [ref=e437]:
+                        - generic [ref=e438]: US, Iran agree to halt fighting "for now", to discuss Hormuz plan in Qatar
+                      - img "© NDTV 24x7" [ref=e439]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/world/us-iran-agree-to-halt-fighting-for-now-to-discuss-hormuz-plan-in-qatar/ar-AA26L0AZ?ocid=TobArticle
+                        - img [ref=e440]
+                - listitem [ref=e443] [cursor=pointer]:
+                  - 'link "Delhi weather today: IMD predicts rain, thunderstorms after warmest morning in 2 years © Times Now" [ref=e444]':
+                    - /url: /search?q=Delhi+weather+today%3a+IMD+predicts+rain%2c+thunderstorms+after+warmest+morning+in+2+years&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_BD3E0525C57D581D5A3B52DECA30917D%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e445]:
+                      - 'heading "Delhi weather today: IMD predicts rain, thunderstorms after warmest morning in 2 years" [level=2] [ref=e446]':
+                        - generic [ref=e447]: "Delhi weather today: IMD predicts rain, thunderstorms after warmest morning in 2 years"
+                      - img "© Times Now" [ref=e448]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/India/delhi-weather-today-imd-predicts-rain-thunderstorms-after-warmest-morning-in-2-years/ar-AA26KW31?ocid=TobArticle
+                        - img [ref=e449]
+                - listitem [ref=e452] [cursor=pointer]:
+                  - 'link "Gold rate today (June 29, 2026): Check 24K, 22K, 18K prices in Delhi, Mumbai, Kolkata, Chennai, Lucknow and other major cities © Times Now" [ref=e453]':
+                    - /url: /search?q=Gold+rate+today+(June+29%2c+2026)%3a+Check+24K%2c+22K%2c+18K+prices+in+Delhi%2c+Mumbai%2c+Kolkata%2c+Chennai%2c+Lucknow+and+other+major+cities&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_71BF8E44F61D870A7F4466F0E15DC4D3%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e454]:
+                      - 'heading "Gold rate today (June 29, 2026): Check 24K, 22K, 18K prices in Delhi, Mumbai, Kolkata, Chennai, Lucknow and other major cities" [level=2] [ref=e455]':
+                        - generic [ref=e456]: "Gold rate today (June 29, 2026): Check 24K, 22K, 18K prices in Delhi, Mumbai, Kolkata, Chennai, Lucknow and other major cities"
+                      - img "© Times Now" [ref=e457]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/money/markets/gold-rate-today-june-29-2026-check-24k-22k-18k-prices-in-delhi-mumbai-kolkata-chennai-lucknow-and-other-major-cities/ar-AA26LvE8?ocid=TobArticle
+                        - img [ref=e458]
+                - listitem [ref=e461] [cursor=pointer]:
+                  - 'link "US-Iran war live updates: Iran''s ‘serious’ warning to Bahrain after strikes; oil prices rise amid flare-up © Hindustan Times" [ref=e462]':
+                    - /url: /search?q=US-Iran+war+live+updates%3a+Iran%27s+%e2%80%98serious%e2%80%99+warning+to+Bahrain+after+strikes%3b+oil+prices+rise+amid+flare-up&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_44F309FDD5E638B0C9B3E959D3B05416%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e463]:
+                      - 'heading "US-Iran war live updates: Iran''s ‘serious’ warning to Bahrain after strikes; oil prices rise amid flare-up" [level=2] [ref=e464]':
+                        - generic [ref=e465]: "US-Iran war live updates: Iran's ‘serious’ warning to Bahrain after strikes; oil prices rise amid flare-up"
+                      - img "© Hindustan Times" [ref=e466]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/world/us-iran-war-live-updates-iran-s-serious-warning-to-bahrain-after-strikes-oil-prices-rise-amid-flare-up/ar-AA26LfdA?ocid=TobArticle
+                        - img [ref=e467]
+                - listitem [ref=e470] [cursor=pointer]:
+                  - 'link "''Elections can come at any time'': MK Stalin warns Vijay''s TVK govt in Tamil Nadu may not last its five-year term © The Times of India" [ref=e471]':
+                    - /url: /search?q=%27Elections+can+come+at+any+time%27%3a+MK+Stalin+warns+Vijay%27s+TVK+govt+in+Tamil+Nadu+may+not+last+its+five-year+term&efirst=0&ecount=50&filters=tnTID%3a%22TOBP2_DA2641A5A2445B350F777779EF429D62%22+tnVersion%3a%2275c7134a-4918-43b6-bab4-79913d95e414%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnOrder%3a%22bc0ea922-a736-4f23-9b87-c2f76ac7d949%22&form=HPNN01
+                    - generic [ref=e472]:
+                      - 'heading "''Elections can come at any time'': MK Stalin warns Vijay''s TVK govt in Tamil Nadu may not last its five-year term" [level=2] [ref=e473]':
+                        - generic [ref=e474]: "'Elections can come at any time': MK Stalin warns Vijay's TVK govt in Tamil Nadu may not last its five-year term"
+                      - img "© The Times of India" [ref=e475]
+                      - link "Read Article":
+                        - /url: https://www.msn.com/en-in/news/other/elections-can-come-at-any-time-mk-stalin-warns-vijay-s-tvk-govt-in-tamil-nadu-may-not-last-its-five-year-term/ar-AA26Lw9Q?ocid=TobArticle
+                        - img [ref=e476]
+        - complementary [ref=e479]:
+          - generic [ref=e481]:
+            - generic [ref=e482]: DISCOVER
+            - main [ref=e489]:
+              - generic [ref=e492]:
+                - generic [ref=e495]:
+                  - tablist [ref=e497]:
+                    - tab [selected] [ref=e498] [cursor=pointer]
+                    - tab [ref=e500] [cursor=pointer]
+                    - tab [ref=e502] [cursor=pointer]
+                    - tab [ref=e504] [cursor=pointer]
+                    - tab [ref=e506] [cursor=pointer]
+                    - tab [ref=e508] [cursor=pointer]
+                    - tab [ref=e510] [cursor=pointer]
+                    - tab [ref=e512] [cursor=pointer]
+                    - tab [ref=e514] [cursor=pointer]
+                    - tab [ref=e516] [cursor=pointer]
+                    - tab [ref=e518] [cursor=pointer]
+                    - tab [ref=e520] [cursor=pointer]
+                    - tab [ref=e522] [cursor=pointer]
+                  - button [ref=e526]
+                  - button [ref=e529]
+                  - article "Fire breaks out on 21st floor of Noida high-rise; AC blast suspected" [ref=e530] [cursor=pointer]:
+                    - generic [ref=e532]:
+                      - img [ref=e533]
+                      - generic [ref=e536]:
+                        - generic [ref=e537]:
+                          - generic [ref=e538]:
+                            - generic [ref=e539]:
+                              - img [ref=e540]
+                              - generic [ref=e541]: NDTV 24x7
+                            - generic [ref=e542]: ·
+                            - generic [ref=e543]: 2h
+                          - link "Fire breaks out on 21st floor of Noida high-rise; AC blast suspected, NDTV 24x7" [ref=e544]:
+                            - /url: https://www.msn.com/en-in/news/india/fire-breaks-out-on-21st-floor-of-noida-high-rise-ac-blast-suspected/vi-AA26LAIk
+                            - text: Fire breaks out on 21st floor of Noida high-rise; AC blast suspected
+                        - generic "Fire breaks out on 21st floor of Noida high-rise; AC blast suspected" [ref=e548]:
+                          - generic [ref=e550]:
+                            - generic [ref=e551]:
+                              - button "12 Like" [ref=e552]:
+                                - generic [ref=e553]:
+                                  - img [ref=e554]
+                                  - generic [ref=e556]: "12"
+                              - button "Dislike" [ref=e557]:
+                                - img [ref=e559]
+                            - link "Start the conversation" [ref=e562]:
+                              - /url: https://www.msn.com/en-in/news/india/fire-breaks-out-on-21st-floor-of-noida-high-rise-ac-blast-suspected/vi-AA26LAIk#comments
+                              - button "Start the conversation" [ref=e563]:
+                                - img [ref=e564]
+                      - generic [ref=e566]:
+                        - button "Hide this story" [ref=e567]
+                        - button "See more" [ref=e568]
+                - 'article "''Age ko chhordiye'': India-origin Ireland pacer Jai Moondra makes big Vaibhav Sooryavanshi admission - watch" [ref=e569] [cursor=pointer]':
+                  - generic [ref=e571]:
+                    - img [ref=e572]
+                    - generic [ref=e573]:
+                      - generic [ref=e574]:
+                        - generic [ref=e575]:
+                          - generic [ref=e576]:
+                            - img [ref=e577]
+                            - generic [ref=e578]: The Times of India
+                          - generic [ref=e579]: ·
+                          - generic [ref=e580]: 21h
+                        - 'link "''Age ko chhordiye'': India-origin Ireland pacer Jai Moondra makes big Vaibhav Sooryavanshi admission - watch, The Times of India" [ref=e581]':
+                          - /url: https://www.msn.com/en-in/sports/cricket/age-ko-chhordiye-india-origin-ireland-pacer-jai-moondra-makes-big-vaibhav-sooryavanshi-admission-watch/ar-AA26IzNI
+                          - text: "'Age ko chhordiye': India-origin Ireland pacer Jai Moondra makes big Vaibhav Sooryavanshi admission - watch"
+                      - 'generic "''Age ko chhordiye'': India-origin Ireland pacer Jai Moondra makes big Vaibhav Sooryavanshi admission - watch" [ref=e585]':
+                        - generic [ref=e587]:
+                          - generic [ref=e588]:
+                            - button "92 Like" [ref=e589]:
+                              - generic [ref=e590]:
+                                - img [ref=e591]
+                                - generic [ref=e593]: "92"
+                            - button "Dislike" [ref=e594]:
+                              - img [ref=e596]
+                          - link "View comments 1 Comment" [ref=e599]:
+                            - /url: https://www.msn.com/en-in/sports/cricket/age-ko-chhordiye-india-origin-ireland-pacer-jai-moondra-makes-big-vaibhav-sooryavanshi-admission-watch/ar-AA26IzNI#comments
+                            - button "View comments 1 Comment" [ref=e600]:
+                              - img [ref=e601]
+                            - generic [ref=e603]: "1"
+                    - generic [ref=e604]:
+                      - button "Hide this story" [ref=e605]
+                      - button "See more" [ref=e606]
+                - article [ref=e607] [cursor=pointer]:
+                  - generic [ref=e613]:
+                    - generic [ref=e615]:
+                      - img "World Cup coverage" [ref=e617]
+                      - link "World Cup coverage" [ref=e618]:
+                        - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=d1e056cf9dc8420995a3c1d92bcb7c25
+                        - heading "World Cup coverage" [level=2] [ref=e619]
+                      - button "More interests" [ref=e620]
+                      - generic [ref=e621]:
+                        - generic "Trending now" [ref=e622]:
+                          - button "Trending now" [ref=e623]
+                        - button "More options" [ref=e624]
+                    - generic [ref=e628]:
+                      - link "South Africa Final · 29 Jun 0 - 1 Canada" [ref=e630]:
+                        - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452545?uxmode=ruby&ocid=BingHp01&cvid=d1e056cf9dc8420995a3c1d92bcb7c25
+                        - generic [ref=e631]:
+                          - generic [ref=e632]:
+                            - generic [ref=e633]:
+                              - button "Click to follow South Africa":
+                                - generic:
+                                  - img
+                            - generic "South Africa" [ref=e634]
+                          - generic [ref=e636]:
+                            - generic "29 Jun - Final" [ref=e637]: Final · 29 Jun
+                            - generic [ref=e638]:
+                              - generic [ref=e640]: "0"
+                              - generic [ref=e641]: "-"
+                              - generic [ref=e642]:
+                                - generic [ref=e643]: "1"
+                                - img [ref=e645]
+                          - generic [ref=e647]:
+                            - generic [ref=e648]:
+                              - button "Click to follow Canada":
+                                - generic:
+                                  - img
+                            - generic "Canada" [ref=e649]
+                      - link "Brazil 10:30 pm 29 Jun - FOX US Japan" [ref=e651]:
+                        - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452557?uxmode=ruby&ocid=BingHp01&cvid=d1e056cf9dc8420995a3c1d92bcb7c25
+                        - generic [ref=e652]:
+                          - generic [ref=e653]:
+                            - generic [ref=e654]:
+                              - button "Click to follow Brazil":
+                                - generic:
+                                  - img
+                            - generic "Brazil" [ref=e655]
+                          - generic [ref=e657]:
+                            - generic "10:30 pm" [ref=e658]:
+                              - generic [ref=e659]: 10:30 pm
+                            - generic "29 Jun - FOX US" [ref=e660]
+                          - generic [ref=e661]:
+                            - generic [ref=e662]:
+                              - button "Click to follow Japan":
+                                - generic:
+                                  - img
+                            - generic "Japan" [ref=e663]
+                      - link "Germany 2:00 am 30 Jun - FOX US Paraguay" [ref=e665]:
+                        - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup/game-center/sp-id-53452541?uxmode=ruby&ocid=BingHp01&cvid=d1e056cf9dc8420995a3c1d92bcb7c25
+                        - generic [ref=e666]:
+                          - generic [ref=e667]:
+                            - generic [ref=e668]:
+                              - button "Click to follow Germany":
+                                - generic:
+                                  - img
+                            - generic "Germany" [ref=e669]
+                          - generic [ref=e671]:
+                            - generic "2:00 am" [ref=e672]:
+                              - generic [ref=e673]: 2:00 am
+                            - generic "30 Jun - FOX US" [ref=e674]
+                          - generic [ref=e675]:
+                            - generic [ref=e676]:
+                              - button "Click to follow Paraguay":
+                                - generic:
+                                  - img
+                            - generic "Paraguay" [ref=e677]
+                    - generic [ref=e679]:
+                      - generic [ref=e680]:
+                        - generic "Previous" [ref=e681]:
+                          - button "Previous" [ref=e682]
+                        - tablist [ref=e684]:
+                          - tab "tab-0" [selected] [ref=e685]
+                          - tab "tab-1" [ref=e687]
+                          - tab "tab-2" [ref=e689]
+                          - tab "tab-3" [ref=e691]
+                          - tab "tab-4" [ref=e693]
+                          - tab "tab-5"
+                          - tab "tab-6"
+                          - tab "tab-7"
+                          - tab "tab-8"
+                          - tab "tab-9"
+                          - tab "tab-10"
+                          - tab "tab-11"
+                          - tab "tab-12"
+                          - tab "tab-13"
+                          - tab "tab-14"
+                          - tab "tab-15"
+                        - generic "Next" [ref=e695]:
+                          - button "Next" [ref=e696]
+                      - link "See more World Cup coverage" [ref=e698]:
+                        - /url: https://www.msn.com/en-in/sports/football/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=d1e056cf9dc8420995a3c1d92bcb7c25
+                - article [ref=e699] [cursor=pointer]:
+                  - generic [ref=e704]:
+                    - generic [ref=e706]:
+                      - link "Top stories" [ref=e708]:
+                        - /url: https://www.msn.com/en-in/channel/topic/Top%20stories/tp-Y_0b495ad3-9beb-45f8-9214-c8e95aa2468f?cvid=d1e056cf9dc8420995a3c1d92bcb7c25&ocid=BingHp01
+                        - heading "Top stories" [level=2] [ref=e709]
+                      - button "More options" [ref=e711]
+                    - list [ref=e714]:
+                      - 'listitem "Fresh twist in Ram Temple donation theft probe: SBI wanted counting staff removed 3 months ago" [ref=e715]':
+                        - generic [ref=e716]:
+                          - generic [ref=e717]:
+                            - img [ref=e718]
+                            - generic [ref=e719]:
+                              - generic: News18 ·21m
+                          - generic [ref=e720]: "Fresh twist in Ram Temple donation theft probe: SBI wanted counting staff removed 3 months ago"
+                      - 'listitem "Lohagad Fort murder: Siya''s lawyers say confession not ''admissible evidence'' as police reveal how she ''signalled'' Chetan to push Ketan off cliff" [ref=e721]':
+                        - generic [ref=e722]:
+                          - generic [ref=e723]:
+                            - img [ref=e724]
+                            - generic [ref=e725]:
+                              - generic: WION ·now
+                          - generic [ref=e726]: "Lohagad Fort murder: Siya's lawyers say confession not 'admissible evidence' as police reveal how she 'signalled' Chetan to push Ketan off cliff"
+                      - 'listitem "₹5 lakh fine if Ram temple donation case accused represented: UP bar association to its lawyers" [ref=e727]':
+                        - generic [ref=e728]:
+                          - generic [ref=e729]:
+                            - img [ref=e730]
+                            - generic [ref=e731]:
+                              - generic: Hindustan Times ·16m
+                          - generic [ref=e732]: "₹5 lakh fine if Ram temple donation case accused represented: UP bar association to its lawyers"
+                    - generic [ref=e734]:
+                      - generic [ref=e735]:
+                        - generic "Previous" [ref=e736]:
+                          - button "Previous" [ref=e737]
+                        - tablist [ref=e739]:
+                          - tab "tab-0" [selected] [ref=e740]
+                          - tab "tab-1" [ref=e742]
+                          - tab "tab-2" [ref=e744]
+                        - generic "Next" [ref=e746]:
+                          - button "Next" [ref=e747]
+                      - link "See more" [ref=e749]:
+                        - /url: https://www.msn.com/en-in/channel/topic/Top%20stories/tp-Y_0b495ad3-9beb-45f8-9214-c8e95aa2468f?cvid=d1e056cf9dc8420995a3c1d92bcb7c25&ocid=BingHp01
+                - article "Watch a 2-ton saltwater crocodile explode out of water – it happens in seconds" [ref=e750] [cursor=pointer]:
+                  - generic [ref=e752]:
+                    - generic [ref=e758]:
+                      - generic [ref=e759]:
+                        - generic [ref=e760]:
+                          - generic [ref=e761]:
+                            - img [ref=e762]
+                            - generic [ref=e763]: Real Science
+                          - generic [ref=e764]: ·
+                          - generic [ref=e765]: 2d
+                        - link "Watch a 2-ton saltwater crocodile explode out of water – it happens in seconds, Real Science" [ref=e766]:
+                          - /url: https://www.msn.com/en-in/video/news/watch-a-2-ton-saltwater-crocodile-explode-out-of-water-it-happens-in-seconds/vi-AA22AKNd
+                          - text: Watch a 2-ton saltwater crocodile explode out of water – it happens in seconds
+                      - generic "Watch a 2-ton saltwater crocodile explode out of water – it happens in seconds" [ref=e770]:
+                        - generic [ref=e772]:
+                          - generic [ref=e773]:
+                            - button "422 Like" [ref=e774]:
+                              - generic [ref=e775]:
+                                - img [ref=e776]
+                                - generic [ref=e778]: "422"
+                            - button "Dislike" [ref=e779]:
+                              - img [ref=e781]
+                          - link "View comments 1 Comment" [ref=e784]:
+                            - /url: https://www.msn.com/en-in/video/news/watch-a-2-ton-saltwater-crocodile-explode-out-of-water-it-happens-in-seconds/vi-AA22AKNd#comments
+                            - button "View comments 1 Comment" [ref=e785]:
+                              - img [ref=e786]
+                            - generic [ref=e788]: "1"
+                    - generic [ref=e789]:
+                      - button "Hide this story" [ref=e790]
+                      - button "See more" [ref=e791]
+                - article "Gaurav Khanna's wife Akanksha Chamola announces divorce, says, \"We have been living separately for the last one year\"" [ref=e792] [cursor=pointer]:
+                  - generic [ref=e794]:
+                    - img [ref=e795]
+                    - generic [ref=e796]:
+                      - generic [ref=e797]:
+                        - generic [ref=e798]:
+                          - generic [ref=e799]:
+                            - img [ref=e800]
+                            - generic [ref=e801]: Moneycontrol
+                          - generic [ref=e802]: ·
+                          - generic [ref=e803]: 1d
+                        - link "Gaurav Khanna's wife Akanksha Chamola announces divorce, says, \"We have been living separately for the last one year\", Moneycontrol" [ref=e804]:
+                          - /url: https://www.msn.com/en-in/entertainment/bollywood/gaurav-khanna-s-wife-akanksha-chamola-announces-divorce-says-we-have-been-living-separately-for-the-last-one-year/ar-AA26Hakt
+                          - text: Gaurav Khanna's wife Akanksha Chamola announces divorce, says, "We have been living separately for the last one year"
+                      - generic "Gaurav Khanna's wife Akanksha Chamola announces divorce, says, \"We have been living separately for the last one year\"" [ref=e808]:
+                        - generic [ref=e810]:
+                          - generic [ref=e811]:
+                            - button "113 Like" [ref=e812]:
+                              - generic [ref=e813]:
+                                - img [ref=e814]
+                                - generic [ref=e816]: "113"
+                            - button "Dislike" [ref=e817]:
+                              - img [ref=e819]
+                          - link "View comments 6 Comment" [ref=e822]:
+                            - /url: https://www.msn.com/en-in/entertainment/bollywood/gaurav-khanna-s-wife-akanksha-chamola-announces-divorce-says-we-have-been-living-separately-for-the-last-one-year/ar-AA26Hakt#comments
+                            - button "View comments 6 Comment" [ref=e823]:
+                              - img [ref=e824]
+                            - generic [ref=e826]: "6"
+                    - generic [ref=e827]:
+                      - button "Hide this story" [ref=e828]
+                      - button "See more" [ref=e829]
+                - 'article "‘Felt like another planet’: Indian man’s first day in Japan leaves him stunned" [ref=e830] [cursor=pointer]':
+                  - generic [ref=e832]:
+                    - img [ref=e833]
+                    - generic [ref=e834]:
+                      - generic [ref=e835]:
+                        - generic [ref=e836]:
+                          - generic [ref=e837]:
+                            - img [ref=e838]
+                            - generic [ref=e839]: Times Now
+                          - generic [ref=e840]: ·
+                          - generic [ref=e841]: 1d
+                        - 'link "‘Felt like another planet’: Indian man’s first day in Japan leaves him stunned, Times Now" [ref=e842]':
+                          - /url: https://www.msn.com/en-in/news/india/felt-like-another-planet-indian-man-s-first-day-in-japan-leaves-him-stunned/ar-AA26FgMN
+                          - text: "‘Felt like another planet’: Indian man’s first day in Japan leaves him stunned"
+                      - 'generic "‘Felt like another planet’: Indian man’s first day in Japan leaves him stunned" [ref=e846]':
+                        - generic [ref=e848]:
+                          - generic [ref=e849]:
+                            - button "102 Like" [ref=e850]:
+                              - generic [ref=e851]:
+                                - img [ref=e852]
+                                - generic [ref=e854]: "102"
+                            - button "Dislike" [ref=e855]:
+                              - img [ref=e857]
+                          - link "View comments 4 Comment" [ref=e860]:
+                            - /url: https://www.msn.com/en-in/news/india/felt-like-another-planet-indian-man-s-first-day-in-japan-leaves-him-stunned/ar-AA26FgMN#comments
+                            - button "View comments 4 Comment" [ref=e861]:
+                              - img [ref=e862]
+                            - generic [ref=e864]: "4"
+                    - generic [ref=e865]:
+                      - button "Hide this story" [ref=e866]
+                      - button "See more" [ref=e867]
+                - 'article "Welcome to the Jungle box office collection day 3: Akshay Kumar film scores a big Sunday, makes over ₹63 crore" [ref=e868] [cursor=pointer]':
+                  - generic [ref=e870]:
+                    - img [ref=e871]
+                    - generic [ref=e872]:
+                      - generic [ref=e873]:
+                        - generic [ref=e874]:
+                          - generic [ref=e875]:
+                            - img [ref=e876]
+                            - generic [ref=e877]: Hindustan Times
+                          - generic [ref=e878]: ·
+                          - generic [ref=e879]: 17h
+                        - 'link "Welcome to the Jungle box office collection day 3: Akshay Kumar film scores a big Sunday, makes over ₹63 crore, Hindustan Times" [ref=e880]':
+                          - /url: https://www.msn.com/en-in/entertainment/bollywood/welcome-to-the-jungle-box-office-collection-day-3-akshay-kumar-film-scores-a-big-sunday-makes-over-63-crore/ar-AA26JM5q
+                          - text: "Welcome to the Jungle box office collection day 3: Akshay Kumar film scores a big Sunday, makes over ₹63 crore"
+                      - 'generic "Welcome to the Jungle box office collection day 3: Akshay Kumar film scores a big Sunday, makes over ₹63 crore" [ref=e884]':
+                        - generic [ref=e886]:
+                          - generic [ref=e887]:
+                            - button "49 Like" [ref=e888]:
+                              - generic [ref=e889]:
+                                - img [ref=e890]
+                                - generic [ref=e892]: "49"
+                            - button "Dislike" [ref=e893]:
+                              - img [ref=e895]
+                          - link "Start the conversation" [ref=e898]:
+                            - /url: https://www.msn.com/en-in/entertainment/bollywood/welcome-to-the-jungle-box-office-collection-day-3-akshay-kumar-film-scores-a-big-sunday-makes-over-63-crore/ar-AA26JM5q#comments
+                            - button "Start the conversation" [ref=e899]:
+                              - img [ref=e900]
+                    - generic [ref=e902]:
+                      - button "Hide this story" [ref=e903]
+                      - button "See more" [ref=e904]
+                - article [ref=e905] [cursor=pointer]:
+                  - generic [ref=e911]:
+                    - generic [ref=e913]:
+                      - img "Watchlist suggestions" [ref=e915]
+                      - link "Watchlist suggestions" [ref=e916]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?ocid=BingHp01
+                        - heading "Watchlist suggestions" [level=2] [ref=e917]
+                      - button "More options" [ref=e919]
+                    - generic [ref=e924]:
+                      - link "Silver Silver ‎-1.17%‎ 58.53" [ref=e926]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?id=auvwr7&ocid=BingHp01
+                        - generic [ref=e927]:
+                          - generic [ref=e929]: Silver
+                          - generic [ref=e931]: Silver
+                        - generic [ref=e934]:
+                          - generic [ref=e935]: ‎-1.17%‎
+                          - generic [ref=e936]: "58.53"
+                        - button "Add to watchlist" [ref=e939]:
+                          - img [ref=e940]
+                      - link "Citigroup Inc C ‎-2.22%‎ 141.76" [ref=e944]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?id=a1p3ww&ocid=BingHp01
+                        - generic [ref=e945]:
+                          - generic [ref=e947]: Citigroup Inc
+                          - generic [ref=e949]: C
+                        - generic [ref=e952]:
+                          - generic [ref=e953]: ‎-2.22%‎
+                          - generic [ref=e954]: "141.76"
+                        - button "Add to watchlist" [ref=e957]:
+                          - img [ref=e958]
+                      - link "Reliance Industries Ltd RELIANCE ‎-1.20%‎ 1,302.30" [ref=e962]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?id=ahjo52&ocid=BingHp01
+                        - generic [ref=e963]:
+                          - generic [ref=e965]: Reliance Industries Ltd
+                          - generic [ref=e967]: RELIANCE
+                        - generic [ref=e970]:
+                          - generic [ref=e971]: ‎-1.20%‎
+                          - generic [ref=e972]: 1,302.30
+                        - button "Add to watchlist" [ref=e975]:
+                          - img [ref=e976]
+                      - link "AT&T Inc T ‎+1.34%‎ 22.72" [ref=e980]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?id=a23www&ocid=BingHp01
+                        - generic [ref=e981]:
+                          - generic [ref=e983]: AT&T Inc
+                          - generic [ref=e985]: T
+                        - generic [ref=e988]:
+                          - generic [ref=e989]: ‎+1.34%‎
+                          - generic [ref=e990]: "22.72"
+                        - button "Add to watchlist" [ref=e993]:
+                          - img [ref=e994]
+                      - link "Adani Power Ltd ADANIPOWER ‎-1.07%‎ 226.81" [ref=e998]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?id=ahgr9c&ocid=BingHp01
+                        - generic [ref=e999]:
+                          - generic [ref=e1001]: Adani Power Ltd
+                          - generic [ref=e1003]: ADANIPOWER
+                        - generic [ref=e1006]:
+                          - generic [ref=e1007]: ‎-1.07%‎
+                          - generic [ref=e1008]: "226.81"
+                        - button "Add to watchlist" [ref=e1011]:
+                          - img [ref=e1012]
+                    - generic [ref=e1016]:
+                      - generic [ref=e1017]:
+                        - generic "Previous" [ref=e1018]:
+                          - button "Previous" [ref=e1019]
+                        - tablist [ref=e1021]:
+                          - tab "tab-0" [selected] [ref=e1022]
+                          - tab "tab-1" [ref=e1024]
+                          - tab "tab-2" [ref=e1026]
+                          - tab "tab-3" [ref=e1028]
+                        - generic "Next" [ref=e1030]:
+                          - button "Next" [ref=e1031]
+                      - link "See watchlist suggestions" [ref=e1033]:
+                        - /url: https://www.msn.com/en-in/money/watchlist?ocid=BingHp01
+      - contentinfo:
+        - generic [ref=e1035]:
+          - generic [ref=e1036]: © 2026 Microsoft
+          - list [ref=e1037]:
+            - listitem [ref=e1038]:
+              - link "Privacy and Cookies" [ref=e1039] [cursor=pointer]:
+                - /url: //go.microsoft.com/fwlink/?LinkId=521839
+            - listitem [ref=e1040]:
+              - link "Legal" [ref=e1041] [cursor=pointer]:
+                - /url: //go.microsoft.com/fwlink/?LinkID=246338
+            - listitem [ref=e1042]:
+              - link "Advertise" [ref=e1043] [cursor=pointer]:
+                - /url: //go.microsoft.com/fwlink/?linkid=868923
+            - listitem [ref=e1044]:
+              - link "About our ads" [ref=e1045] [cursor=pointer]:
+                - /url: //go.microsoft.com/fwlink/?LinkID=286759
+            - listitem [ref=e1046]:
+              - link "Help" [ref=e1047] [cursor=pointer]:
+                - /url: //support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f
+            - listitem [ref=e1048]:
+              - link "Feedback" [ref=e1049] [cursor=pointer]:
+                - /url: "#"
+  - dialog "Quick Search"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | 
+  3  | const searchData = [
+  4  |     { keyword: "playwright", expectedTitle: "playwright" },
+  5  |     { keyword: "selenium", expectedTitle: "selenium" },
+  6  |     { keyword: "cucumber", expectedTitle: "cucumber" },
+  7  | ];
+  8  | 
+  9  | test.describe("Bing search test", () => {
+  10 |     for (const sd of searchData) {
+  11 |         test(`search Flow - ${sd.keyword}`, async ({ page }) => {
+> 12 |             await page.goto("https://www.bing.com/");
+     |                        ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.bing.com/
+  13 | 
+  14 |             await page.locator("textarea[name='q'], input[name='q']").fill(sd.keyword);
+  15 | 
+  16 |             await page.locator("input[type='submit']").click();
+  17 | 
+  18 |             const firstResult = page.locator("h2 a").first();
+  19 | 
+  20 |             await expect(firstResult).toBeVisible();
+  21 |             await firstResult.click();
+  22 | 
+  23 |             await expect(page).toHaveTitle(new RegExp(sd.expectedTitle, "i"));
+  24 |         });
+  25 |     }
+  26 | });
+```

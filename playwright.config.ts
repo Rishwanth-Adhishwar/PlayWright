@@ -14,11 +14,19 @@ export default defineConfig({
 
   forbidOnly: !!process.env.CI,
 
-  retries: process.env.CI ? 2 : 0,
+  retries: 2,
 
   workers: process.env.CI ? 1 : undefined,
+  // testMatch: "tests/grouping.test.ts",
 
+  //Each test
   timeout: 60 * 1000, // 60 seconds
+
+  //For Running all test (E2E)
+  globalTimeout: 30 * 60 * 1000,
+
+  // repeatEach: 3,
+
 
   // Timeout for expect assertions
   expect: {
@@ -30,6 +38,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'on',
     video: 'retain-on-failure',
+    actionTimeout: 15 * 1000,
   },
 
   projects: [
